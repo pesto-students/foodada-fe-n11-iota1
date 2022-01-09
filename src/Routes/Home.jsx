@@ -8,6 +8,7 @@ import CollectionsPage from "../CollectionsPage/CollectionsPage";
 import ExploreZomato from "../ExploreZomato/ExploreZomato";
 import Checkout from "../Checkout/Checkout";
 import ProfilePage from "../ProfilePage/ProfilePage";
+import AdminProfilePage from "../Admin/ProfilePage/ProfilePage";
 import PaymentSuccessPage from "../PaymentSuccessPage/PaymentSuccessPage";
 
 function Home(props) {
@@ -86,11 +87,11 @@ https://b.zmtcdn.com/web_assets/b69badeeb9ef00f59428b4c09ef4c1901575873261.png"
         <Route path="/:city/explore" render={() => <ExploreZomato />} />
         <Route path="/users/:username" render={() => <ProfilePage />} />
         <Route path="/:city/payment" render={() => <PaymentSuccessPage />} />
-        <Route path="/admin/city" render={() => <ExploreZomato />} />
-        <Route path="/admin/resaurant" render={() => <ProfilePage />} />
-        <Route path="/admin/menu" render={() => <PaymentSuccessPage />} />
-        <Route path="/admin/locat" render={() => <PaymentSuccessPage />} />
-        <Route path="/admin/order" render={() => <PaymentSuccessPage />} />
+        <Route 
+         exact
+        path="/admin" 
+        render={() => <AdminProfilePage />} />
+       
         <Route render={() => ErrorPage} />
       </Switch>
     </div>

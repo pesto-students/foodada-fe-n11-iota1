@@ -146,7 +146,8 @@ function LoginPage(props) {
     userLoginVerify,
   } = props;
   const [loginWithEmail, setLoginWithEmail] = useState(false);
-  const [email, setEmail] = useState("");
+  //line 150 for defauil test login  
+  const [email, setEmail] = useState("jeetendra.chauhan04@gmail.com");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [otpValue, setOtpValue] = useState("");
@@ -158,17 +159,21 @@ function LoginPage(props) {
     if (email === "") {
       setError(true);
       setErrorMessage("Please enter an email");
-    } else {
-      let atTheRate = email.split("@");
-      let dotCom = email.split(".");
-      if (
-        atTheRate.length !== 2 ||
-        dotCom.length !== 2 ||
-        dotCom.indexOf("com") === -1
-      ) {
-        setError(true);
-        setErrorMessage("Please enter a valid email");
-      } else {
+    } 
+    else {
+      //let atTheRate = email.split("@");
+      //let dotCom = email.split(".");
+      if(false){//uncomment this code for email validation 
+      }
+      // if (
+      //   atTheRate.length !== 2 ||
+      //   dotCom.length !== 2 ||
+      //   dotCom.indexOf("com") === -1
+      // ) {
+      //   setError(true);
+      //   setErrorMessage("Please enter a valid email");
+      // }
+       else {
         let result = await userLogin(email);
         if (result.error === false) {
           setError(false);

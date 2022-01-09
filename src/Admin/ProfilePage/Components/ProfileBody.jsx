@@ -144,13 +144,13 @@ export default function ProfileBody() {
               onChange={handleChange}
               className={classes.tabs}
             >
-              <Tab label=" Order History" {...a11yProps(6)} />
+              <Tab label="Dineline" {...a11yProps(6)} />
               <Tab label="Photo" {...a11yProps(1)} />
               <Tab label="Followers" {...a11yProps(2)} />
               <Tab label="Bookmarks" {...a11yProps(3)} />
               <Tab label="Reviews" {...a11yProps(4)} />
               <Tab label="Blog Posts" {...a11yProps(5)} />
-              <Tab label="Dineline" {...a11yProps(0)} />
+              <Tab label="Order History" {...a11yProps(0)} />
               <Tab label="My addresses" {...a11yProps(7)} />
               <Tab label="Favorite Orders" {...a11yProps(8)} />
             </Tabs>

@@ -548,7 +548,7 @@ function RestroCards() {
               </div>
 
               <div className="col-10">
-                <div className="border p-3 rounded search-div">
+                {/* <div className="border p-3 rounded search-div">
                   <div className="row">
                     <div className="col-5">
                       Searching in...
@@ -583,7 +583,7 @@ function RestroCards() {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="row mt-3">
                   {restaurants &&
                     restaurants?.map((restaurant, i) => {

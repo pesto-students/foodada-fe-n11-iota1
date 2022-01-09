@@ -14,6 +14,7 @@ import { NavigationWrapper } from "../Style/NavigationStyle";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import { userLogout } from "../Redux/action";
 
+
 const useStyles = makeStyles((theme) => ({
   expand: {
     padding: 0,
@@ -82,7 +83,8 @@ function Navigation(props) {
       <nav>
         <ul className="mobileNavigation"></ul>
         <ul className="defaultNavigation">
-          <li className="zomatoLogo">Get the app</li>
+        {/* <Link to={"/admin"}><li className="zomatoLogo">Go To Admin</li></Link> */}
+          
           {activeUserDetails.active !== false ? (
             <ClickAwayListener onClickAway={() => setExpanded(false)}>
               <li className="navigationButton userDetails">
@@ -114,12 +116,12 @@ function Navigation(props) {
                     >
                       <div>Profile</div>
                     </Link>
-                    <div>Notifications</div>
+                    {/* <div>Notifications</div>
                     <div>Bookmarks</div>
                     <div>Reviews</div>
                     <div>Network</div>
                     <div>Find friends</div>
-                    <div>Settings</div>
+                    <div>Settings</div> */}
                     <div onClick={logOutUser}>Log out</div>
                   </Card>
                 </Fade>

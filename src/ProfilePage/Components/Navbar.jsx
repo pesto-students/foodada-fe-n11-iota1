@@ -227,13 +227,13 @@ function RestroNavbar(props) {
 
                 <Fade in={expanded}>
                   <Card className={classes.popup}>
-                    <div>Profile</div>
+                    {/* <div>Profile</div>
                     <div>Notifications</div>
                     <div>Bookmarks</div>
                     <div>Reviews</div>
                     <div>Network</div>
                     <div>Find friends</div>
-                    <div>Settings</div>
+                    <div>Settings</div> */}
                     <div onClick={logOutUser}>Log out</div>
                   </Card>
                 </Fade>

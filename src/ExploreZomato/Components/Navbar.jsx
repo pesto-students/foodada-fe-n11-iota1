@@ -125,11 +125,12 @@ function Navbar(props) {
                       >
                         <div>Profile</div>
                       </Link>
-                      <div>Notifications</div>
+                      {/* <div>Notifications</div>
                       <div>Bookmarks</div>
                       <div>Reviews</div>
                       <div>Network</div>
                       <div>Find friends</div>
+                      <div>Settings</div> */}
                       <div>Settings</div>
                       <div onClick={logOutUser}>Log out</div>
                     </Card>
@@ -179,7 +180,7 @@ function Navbar(props) {
                   alt="mobile-icon"
                   className="icon ml-3"
                 />
-                <span className="p-2">Get the app</span>
+                <span className="p-2">Go To Admin</span>
               </Link>
             </div>
             <div className="right-content">

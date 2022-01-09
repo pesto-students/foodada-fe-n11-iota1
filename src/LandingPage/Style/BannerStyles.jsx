@@ -39,6 +39,7 @@ export const BannerWrapper = styled.div`
       position: relative;
 
       .zomatoImage {
+        color:white;
         position: absolute;
         top: 0px;
         left: 0px;

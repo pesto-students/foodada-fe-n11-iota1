@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import { connect, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import SearchBar from "../../../LandingPage/Components/SearchBar";
 import { Card, ClickAwayListener } from "@material-ui/core";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import clsx from "clsx";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Fade from "@material-ui/core/Fade";
-import Signup from "../../LandingPage/Components/Signup";
-import LoginPage from "../../LandingPage/Components/LoginPage";
+import Signup from "../../../LandingPage/Components/Signup";
+import LoginPage from "../../../LandingPage/Components/LoginPage";
 import Avatar from "@material-ui/core/Avatar";
-import SearchBar from "../../LandingPage/Components/SearchBar";
-import { userLogout } from "../../LandingPage/Redux/action";
+import { userLogout } from "../../../LandingPage/Redux/action";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
     fontFamily: "Poppins",
   },
   menuButton: {
@@ -26,8 +26,7 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     backgroundColor: "white",
     color: "black",
-    height: "fit-content",
-    padding: "6px 0px",
+    height: "70px",
   },
   toolbar: {
     display: "flex",
@@ -149,6 +148,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "5px",
       paddingLeft: "12px",
       "&:hover": {
+        cursor: "pointer",
         backgroundColor: "#d1d1d1",
       },
     },
@@ -191,10 +191,10 @@ function RestroNavbar(props) {
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.navbar}>
-        <Toolbar variant="dense" className={clsx(classes.toolbar, "container")}>
+        <Toolbar className={clsx(classes.toolbar, "container")}>
           <Link to="/">
             <img
-              src="/tomato_black_final_logo.png"
+              src="/logoz.png"
               alt="logo"
               style={{ height: "30px", width: "150px" }}
             />
@@ -221,28 +221,19 @@ function RestroNavbar(props) {
                   onClick={handleExpandClick}
                   aria-expanded={expanded}
                   aria-label="show more"
-                  style={{ width: "40px", marginLeft: "8px" }}
                 >
                   <ExpandMoreIcon />
                 </IconButton>
 
                 <Fade in={expanded}>
                   <Card className={classes.popup}>
-                    <Link
-                      to={`/users/${activeUserDetails.name
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      <div>Profile</div>
-                    </Link>
-                    {/* <div>Notifications</div>
+                    <div>Profile</div>
+                    <div>Notifications</div>
                     <div>Bookmarks</div>
                     <div>Reviews</div>
                     <div>Network</div>
                     <div>Find friends</div>
-                    <div>Settings</div> */}
+                    <div>Settings</div>
                     <div onClick={logOutUser}>Log out</div>
                   </Card>
                 </Fade>

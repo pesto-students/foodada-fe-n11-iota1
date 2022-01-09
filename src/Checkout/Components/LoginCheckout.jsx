@@ -195,8 +195,8 @@ function LoginCheckout() {
         color: "#c6203d",
       },
     };
-    // const rzp1 = new window.Razorpay(options);
-    // rzp1.open();
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
   };
 
   const getUserCoordinates = () => {
